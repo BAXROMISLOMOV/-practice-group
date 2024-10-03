@@ -1,0 +1,137 @@
+@import "roots";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  margin-left: 0 auto;
+  margin-right: 0 auto;
+  max-width: 1990px;
+}
+nav {
+  background-color: $bg-color;
+  overflow: hidden;
+  padding: 30px;
+  ul {
+    display: flex;
+    gap: 30px;
+    li {
+      list-style: none;
+      a {
+        text-decoration: none;
+        color: $tex-color;
+        font-size: 30px;
+        &:hover {
+          color: $black;
+        }
+      }
+    }
+  }
+}
+input {
+  display: none;
+}
+.phone {
+  display: none;
+  .logo {
+    width: 10%;
+  }
+}
+
+.sectionone {
+  background-color: $sec-bg-color;
+  color: $tex-color;
+  text-align: center;
+  h1 {
+    font-size: 48px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+  p {
+    font-size: 30px;
+    padding-bottom: 50px;
+  }
+}
+.sectiontwo {
+  text-align: center;
+  h2 {
+    font-size: 48px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+  p {
+    padding-bottom: 50px;
+    font-size: 20px;
+    opacity: 0.7;
+  }
+  audio {
+    width: 50%;
+    border: 3px solid $sec-bg-color;
+    border-radius: 10px;
+    opacity: 0.5;
+  }
+  video {
+    width: 50%;
+    height: 40vh;
+    border: 3px solid $sec-bg-color;
+    border-radius: 10px;
+  }
+}
+@media (max-width: 470px) {
+  nav {
+    display: none;
+  }
+
+  input[type="checkbox"]:checked + .sidebar {
+    transform: translatey(0);
+  }
+  .phone {
+    background-color: $gray;
+
+    .burger {
+      display: flex;
+      justify-content: space-around;
+      justify-items: center;
+      label {
+        width: 10vw;
+        height: 50px;
+        .logoo {
+        }
+      }
+    }
+    input {
+      display: none;
+    }
+    display: block;
+    .labbel {
+      display: flex;
+      justify-content: space-around;
+      justify-items: center;
+      align-items: center;
+    }
+
+    .uls {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      li {
+        list-style: none;
+        a {
+          text-decoration: none;
+          color: $black;
+        }
+      }
+    }
+    .sidebar {
+      transform: translatey(-200%);
+      width: 100vw;
+      position: absolute;
+      top: 0;
+      transition: 0.5s;
+      background-color: $bg-color;
+    }
+  }
+}
