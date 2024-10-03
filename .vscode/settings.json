@@ -11,5 +11,6 @@
       "savePath": "/styles/css/minified"
     }
   ],
+  "liveServer.settings.port": 5501,
 
 }
