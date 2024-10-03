@@ -1,0 +1,135 @@
+@import "roots";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  margin-left: 0 auto;
+  margin-right: 0 auto;
+  max-width: 1990px;
+}
+nav {
+  background-color: $bg-color;
+  overflow: hidden;
+  padding: 30px;
+  ul {
+    display: flex;
+    gap: 30px;
+    li {
+      list-style: none;
+      a {
+        text-decoration: none;
+        color: $tex-color;
+        font-size: 30px;
+        &:hover {
+          color: $black;
+        }
+      }
+    }
+  }
+}
+
+.sectionone {
+  background-color: $sec-bg-color;
+  color: $tex-color;
+  text-align: center;
+  h1 {
+    font-size: 48px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+  p {
+    font-size: 30px;
+    padding-bottom: 50px;
+  }
+}
+.sectiontwo {
+  text-align: center;
+  h2 {
+    font-size: 48px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+  p {
+    padding-bottom: 50px;
+    font-size: 30px;
+  }
+  .birds {
+    display: flex;
+    justify-content: space-around;
+    .imgg {
+      p {
+        color: $gray;
+      }
+      .bird {
+        width: 300px;
+        border-radius: 30px;
+        &:hover {
+          transform: scale(1.1);
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+}
+footer {
+  background-color: $bg-color;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+  h2 {
+    padding: 40px 0px;
+    font-size: 18px;
+    color: $tex-color;
+  }
+}
+@media (max-width: 950px) {
+  .sectiontwo {
+    .birds {
+      display: grid;
+      grid-template-columns: auto auto;
+    gap: 50px;
+      justify-content: center;
+      align-items: center;
+      .imgLast{
+        grid-column:1/-1 ;
+      }
+    }
+
+  }
+}
+@media (max-width: 620px) {
+  .sectiontwo {
+    .birds {
+      display: grid;
+      grid-template-columns: auto;
+    }
+  }
+}
+@media (max-width: 470px) {
+  nav {
+    background-color: $bg-color;
+    overflow: hidden;
+    padding: 30px;
+    ul {
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 30px;
+      li {
+        list-style: none;
+        a {
+          text-decoration: none;
+          color: $tex-color;
+          font-size: 30px;
+          &:hover {
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+}
