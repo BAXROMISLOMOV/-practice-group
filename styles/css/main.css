@@ -2,11 +2,9 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: gray;
 }
 
 .container {
-  background-color: black;
   margin-left: 0 auto;
   margin-right: 0 auto;
   max-width: 1990px;
@@ -20,6 +18,7 @@ nav {
 nav ul {
   display: flex;
   gap: 30px;
+  background-color: rgb(56, 56, 56);
 }
 nav ul li {
   list-style: none;
@@ -33,6 +32,109 @@ nav ul li a:hover {
   color: black;
 }
 
+input {
+  display: none;
+}
+
+.phone {
+  display: none;
+}
+.phone .logo {
+  width: 10%;
+}
+
+.sectionone {
+  background-color: rgb(0, 132, 255);
+  color: white;
+  text-align: center;
+}
+.sectionone h1 {
+  font-size: 48px;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+.sectionone p {
+  font-size: 30px;
+  padding-bottom: 50px;
+}
+
+.sectiontwo {
+  text-align: center;
+}
+.sectiontwo h2 {
+  font-size: 48px;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+.sectiontwo p {
+  padding-bottom: 50px;
+  font-size: 20px;
+  opacity: 0.7;
+}
+.sectiontwo audio {
+  width: 50%;
+  border: 3px solid rgb(0, 132, 255);
+  border-radius: 10px;
+  opacity: 0.5;
+}
+.sectiontwo video {
+  width: 50%;
+  height: 40vh;
+  border: 3px solid rgb(0, 132, 255);
+  border-radius: 10px;
+}
+
+@media (max-width: 470px) {
+  nav {
+    display: none;
+  }
+  input[type=checkbox]:checked + .sidebar {
+    transform: translatey(0);
+  }
+  .phone {
+    background-color: gray;
+    display: block;
+  }
+  .phone .burger {
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+  }
+  .phone .burger label {
+    width: 10vw;
+    height: 50px;
+  }
+  .phone input {
+    display: none;
+  }
+  .phone .labbel {
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+  }
+  .phone .uls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .phone .uls li {
+    list-style: none;
+  }
+  .phone .uls li a {
+    text-decoration: none;
+    color: white;
+  }
+  .phone .sidebar {
+    transform: translatey(-200%);
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    transition: 0.5s;
+    background-color: rgb(56, 56, 56);
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -64,6 +166,17 @@ nav ul li a {
 }
 nav ul li a:hover {
   color: black;
+}
+
+input {
+  display: none;
+}
+
+.phone {
+  display: none;
+}
+.phone .logo {
+  width: 10%;
 }
 
 .sectionone {
@@ -162,5 +275,56 @@ footer h2 {
   }
   nav ul li a:hover {
     color: black;
+  }
+}
+@media (max-width: 470px) {
+  nav {
+    display: none;
+  }
+  input[type=checkbox]:checked + .sidebar {
+    transform: translatey(0);
+  }
+  .phone {
+    background-color: gray;
+    display: block;
+  }
+  .phone .burger {
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+  }
+  .phone .burger label {
+    width: 10vw;
+    height: 50px;
+  }
+  .phone input {
+    display: none;
+  }
+  .phone .labbel {
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+  }
+  .phone .uls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .phone .uls li {
+    list-style: none;
+  }
+  .phone .uls li a {
+    text-decoration: none;
+    color: white;
+  }
+  .phone .sidebar {
+    transform: translatey(-200%);
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    transition: 0.5s;
+    background-color: rgb(56, 56, 56);
   }
 }/*# sourceMappingURL=main.css.map */

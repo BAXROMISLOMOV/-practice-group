@@ -31,6 +31,15 @@ nav {
     }
   }
 }
+input {
+  display: none;
+}
+.phone {
+  display: none;
+  .logo {
+    width: 10%;
+  }
+}
 
 .sectionone {
   background-color: $sec-bg-color;
@@ -130,6 +139,62 @@ footer {
           }
         }
       }
+    }
+  }
+}
+@media (max-width: 470px) {
+  nav {
+    display: none;
+  }
+
+  input[type="checkbox"]:checked + .sidebar {
+    transform: translatey(0);
+  }
+  .phone {
+    background-color: $gray;
+
+    .burger {
+      display: flex;
+      justify-content: space-around;
+      justify-items: center;
+      label {
+        width: 10vw;
+        height: 50px;
+        .logoo {
+        }
+      }
+    }
+    input {
+      display: none;
+    }
+    display: block;
+    .labbel {
+      display: flex;
+      justify-content: space-around;
+      justify-items: center;
+      align-items: center;
+    }
+
+    .uls {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      li {
+        list-style: none;
+        a {
+          text-decoration: none;
+          color: $tex-color;
+        }
+      }
+    }
+    .sidebar {
+      transform: translatey(-200%);
+      width: 100vw;
+      position: absolute;
+      top: 0;
+      transition: 0.5s;
+      background-color: $bg-color;
     }
   }
 }
