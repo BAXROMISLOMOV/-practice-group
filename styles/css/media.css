@@ -123,7 +123,7 @@ input {
   }
   .phone .uls li a {
     text-decoration: none;
-    color: black;
+    color: white;
   }
   .phone .sidebar {
     transform: translatey(-200%);
